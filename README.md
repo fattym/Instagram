@@ -1,4 +1,17 @@
-## Specifications
+
+
+## Description
+The app is a photo sharing app which allows users to assign filters to photos and share them with followers. ... Insta_Liters can sync their photo sharing to other social networks, so Instagram photos can be posted directly to Facebook, Tumblr, Twitter, Flickr, and Foursquare.. Visit the live site on
+## User story
+
+As a user of the web application you will be able to:
+
+1. Sign up and log in
+2. View photos posted by other users
+3. Follow other users
+4. Comment on photos
+5. Edit your profile
+## BDD
 | Behavior            | Input                         | Output                        | 
 | ------------------- | ----------------------------- | ----------------------------- |
 | User visits the app and gets redirected to the login page  | User logs in | Directed to the home page where they see posted photos | 
