@@ -113,7 +113,7 @@
                     <a href="{% url 'profile' username=profile.username %}">
                         <strong class="list-inline">{{profile.username}} </strong>
                     </a>
-
+                    <button  type="button" class="btn btn-info float-right btn-sm">follow...</button>
                     {%if user.username == profile.username%}
                     {%else%}
 

@@ -16,13 +16,13 @@
             <img src="{{user.profile.photo.cdn_url}}" alt="Profile Photo" width="70" height="70" class=""
                 style="border-radius: 50%">
             {% else %}
-            <img src="/static/images/avatar.jpg" alt="Avatar" width="70" height="70" class=""
+            <img src="https://bit.ly/3gFpUFE" alt="Avatar" width="70" height="70" class=""
                 style="border-radius: 50%">
             {% endif %}
             <a href="{% url 'profile' username=user.username %}" class="link">
                 <span class="list-inline username ml-2">{{user.username}}</span>
             </a>
-            <button type="button" name="" id="" class="btn btn-primary btn-sm btn-block">follow</button>
+            <button  type="button" class="btn btn-info float-right btn-sm">follow...</button>
         </div>
         {% endfor %}
     </div>
