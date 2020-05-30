@@ -93,7 +93,7 @@
             <img src="{{user.profile.photo.cdn_url}}" alt="Profile Photo" width="70" height="70" class=""
                 style="border-radius: 50%">
             {% else %}
-            <img src="/static/images/avatar.jpg" alt="avatar" width="70" height="70" class=""
+            <img src="https://bit.ly/3gFpUFE" alt="avatar" width="70" height="70" class=""
                 style="border-radius: 50%">
             {% endif %}
             <strong class="list-inline ml-3">{{user.username}} </strong>
@@ -113,7 +113,7 @@
                     <a href="{% url 'profile' username=profile.username %}">
                         <strong class="list-inline">{{profile.username}} </strong>
                     </a>
-                    <button  type="button" class="btn btn-info float-right btn-sm">follow...</button>
+                    <button type="button" class="btn btn-info float-right btn-sm">follow...</button>
                     {%if user.username == profile.username%}
                     {%else%}
 
