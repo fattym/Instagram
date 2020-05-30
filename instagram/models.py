@@ -12,7 +12,8 @@ class Profile(models.Model):
     bio = HTMLField()
     photo = ImageField(blank = True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-
+    following = models.ManyToManyField(User, related_name='followers')
+    
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
