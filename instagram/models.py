@@ -48,6 +48,9 @@ class Profile(models.Model):
     def __str__(self):
         return self.bio
 
+    def __str__(self):
+        return self.user.username
+
 
 class Image(models.Model):
     name = models.CharField(max_length = 50)
