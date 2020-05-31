@@ -34,7 +34,7 @@
 
                     <span>
                         {% if image.id in list %}
-                        <i class="far fa-heart likedheart"></i>
+                        <i  class="far fa-heart likedheart"></i>
                         {% else %}
                         <i class="far fa-heart"></i>
                         {% endif %}
@@ -127,6 +127,14 @@
     </div>
 </div>
 <script>
+    var clicks = 0;
+    function myFunction() {
+
+        clicks += 1;
+        document.getElementById("demo").innerHTML = clicks;
+
+
+    }
     var url = "https://www.instagram.com/username";
     request.get(url, function(err, response, body){
         if(response.body.indexOf(("meta property=\"og:description\" content=\"")) != -1){

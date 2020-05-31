@@ -150,8 +150,7 @@ def upload_image(request):
 
 
 def like(request, image_id):
-    current_user = request.user
-    images = Image.objects.get(id = image_id,  likes= current_user)
+    images = Image.objects.get(id = image_id, user=request.user).first()
     print(liked)
     if liked:
         liked.delete()
