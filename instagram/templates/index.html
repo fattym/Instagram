@@ -26,7 +26,7 @@
 
                 </div>
 
-                <a href="{% url 'like' image_id=image.id%}">
+                <a href="{% url 'like' image_id=image.id%}" method="POST" >
                     <img class="img-fluid" src="{{image.picture.cdn_url}}" alt="Image of {{image.name}}">
                 </a>
 
@@ -86,7 +86,7 @@
             {% endfor %}
 
         </div>
-
+       
         <!-- End of posted images main section -->
         <!-- Users page section -->
         <div class="col-xs-12 col-sm-12 col-md-5">
@@ -127,6 +127,11 @@
     </div>
 </div>
 <script>
-
+    var url = "https://www.instagram.com/username";
+    request.get(url, function(err, response, body){
+        if(response.body.indexOf(("meta property=\"og:description\" content=\"")) != -1){
+            console.log("followers:", response.body.split("meta property=\"og:description\" content=\"")[1].split("Followers")[0])
+        }
+     });
 </script>
 {% endblock %}
